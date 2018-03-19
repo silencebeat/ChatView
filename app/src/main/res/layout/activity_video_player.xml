@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.afollestad.easyvideoplayer.EasyVideoPlayer
+        android:id="@+id/player"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</FrameLayout>
+</layout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <android.support.v7.widget.CardView
+            android:layout_gravity="bottom"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:cardCornerRadius="17.5dp"
+            app:cardElevation="0dp"
+            android:layout_marginBottom="20dp"
+            app:cardBackgroundColor="@color/grey_dot">
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"/>
+
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="70dp"
+            android:layout_marginRight="70dp"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                app:cardCornerRadius="5dp"
+                app:cardElevation="0dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="150dp"
+                    android:layout_height="150dp">
+
+                    <ImageView
+                        android:id="@+id/img_photo"
+                        android:scaleType="centerCrop"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/black_50"/>
+
+                    <android.support.v7.widget.AppCompatImageButton
+                        android:id="@+id/btn_play"
+                        android:layout_centerInParent="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_play"
+                        android:tint="@color/white"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <silencebeat.com.chatview.Supports.Utils.CustomTextView
+                android:id="@+id/txt_time"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/black"
+                android:layout_gravity="end"
+                android:textSize="14sp"
+                android:text="10:46"
+                app:customFont="book.otf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

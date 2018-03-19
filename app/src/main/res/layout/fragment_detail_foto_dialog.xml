@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        <silencebeat.com.chatview.Supports.Utils.TouchImageView
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/img"
+            android:src="@drawable/view_gradient_background"/>
+
+        <FrameLayout
+            android:background="@drawable/view_gradient_background"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_gravity="end"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_close_24dp"
+                android:id="@+id/btn_close"
+                android:tint="@android:color/white"/>
+
+        </FrameLayout>
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:focusableInTouchMode="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <android.support.v7.widget.Toolbar
+        android:gravity="center_horizontal"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:clickable="true"
+                android:focusable="true"
+                android:tint="@color/grey_text"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:src="@drawable/ic_arrow_forward_24dp"
+                android:rotation="-180"/>
+
+            <silencebeat.com.chatview.Supports.Utils.CustomTextView
+                android:id="@+id/txt_title"
+                android:layout_marginLeft="?attr/actionBarSize"
+                android:layout_marginRight="?attr/actionBarSize"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:text="Chats"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textAllCaps="true"
+                app:customFont="book.otf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </FrameLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.RecyclerView
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:id="@+id/list"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/layout_action"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:id="@+id/layout_action"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/btn_camera"
+            android:scaleType="centerInside"
+            android:clickable="true"
+            android:focusable="true"
+            android:tint="@color/grey_text"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_photo_camera"/>
+
+        <ImageButton
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/btn_camera"
+            android:layout_toEndOf="@id/btn_camera"
+            android:id="@+id/btn_gallery"
+            android:scaleType="centerInside"
+            android:clickable="true"
+            android:focusable="true"
+            android:tint="@color/grey_text"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_picture"/>
+
+        <android.support.v7.widget.CardView
+            android:layout_marginRight="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_toRightOf="@id/btn_gallery"
+            android:layout_toEndOf="@id/btn_gallery"
+            android:layout_centerVertical="true"
+            app:cardElevation="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/light_grey"
+            app:cardCornerRadius="3dp">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/edit_message"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textSize="14sp"
+                android:inputType="textMultiLine"
+                android:hint="Write a message..."
+                android:layout_width="match_parent"
+                android:maxHeight="100dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"/>
+
+        </android.support.v7.widget.CardView>
+
+        <ImageButton
+            android:visibility="gone"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/btn_send"
+            android:scaleType="centerInside"
+            android:clickable="true"
+            android:focusable="true"
+            android:tint="@color/colorPrimary"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_send_24dp"/>
+
+        <com.devlomi.record_view.RecordView
+            android:id="@+id/record_view"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_toLeftOf="@id/btn_record"
+            android:layout_toStartOf="@id/btn_record"
+            app:slide_to_cancel_arrow="@drawable/ic_keyboard_arrow_left"
+            app:slide_to_cancel_text="Slide To Cancel"
+            app:slide_to_cancel_margin_right="10dp"/>
+
+        <com.devlomi.record_view.RecordButton
+            android:id="@+id/btn_record"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:scaleType="centerInside"
+            android:tint="@color/colorPrimary"
+            app:src="@drawable/ic_mic_24dp"
+            />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
+</layout>
