@@ -5,6 +5,9 @@ import android.databinding.DataBindingUtil;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -41,6 +44,14 @@ public class IncomingChatVideoViewHolder extends RecyclerView.ViewHolder {
         } catch (ParseException e) {
             e.printStackTrace();
         }
+
+        Glide.with(context)
+                .load(comment.getThumbnailVideo())
+                .asBitmap()
+                .override(100,100 )
+                .dontAnimate()
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .into(binding.imgPhoto);
 
 
         binding.btnPlay.setOnClickListener(new View.OnClickListener() {

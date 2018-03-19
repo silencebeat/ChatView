@@ -2,14 +2,12 @@ package silencebeat.com.chatview.Views.ViewHolders.Outcoming;
 
 import android.content.Context;
 import android.databinding.DataBindingUtil;
-import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 
-import java.io.File;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -46,16 +44,8 @@ public class OutcomingChatImageViewHolder extends RecyclerView.ViewHolder{
             e.printStackTrace();
         }
 
-        Object url;
-
-        if (comment.getFileUrl().contains("http")){
-            url = comment.getFileUrl();
-        }else{
-            url = Uri.fromFile(new File(comment.getFileUrl()));
-        }
-
         Glide.with(context)
-                .load(url)
+                .load(comment.getFileUrl())
                 .asBitmap()
                 .override(100,100 )
                 .dontAnimate()
